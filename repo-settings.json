@@ -1,0 +1,6 @@
+{
+    "name": "terraform-azurerm-azure-virtual-machine",
+    "description": "Terraform module for creating an Azure Virtual Machine (Windows or Linux)",
+    "version": "v1.0.0",
+    "message": "Initial Version"
+}
