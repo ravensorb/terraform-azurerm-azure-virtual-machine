@@ -127,11 +127,6 @@ variable "existing_network_security_group_id" {
   default     = null
 }
 
-variable "nsg_inbound_rules" {
-  description = "List of network rules to apply to network interface."
-  default     = []
-}
-
 variable "virtual_machine_name" {
   description = "The name of the virtual machine."
   default     = ""
@@ -198,7 +193,12 @@ variable "enable_automatic_updates" {
 }
 
 variable "enable_encryption_at_host" {
-  description = " Should all of the disks (including the temp disk) attached to this Virtual Machine be encrypted by enabling Encryption at Host?"
+  description = "Should all of the disks (including the temp disk) attached to this Virtual Machine be encrypted by enabling Encryption at Host?"
+  default     = false
+}
+
+variable "enable_tpm" {
+  description = "(Optional) Enable vTPM on the virtuam machine"
   default     = false
 }
 
@@ -234,12 +234,12 @@ variable "admin_ssh_key_data" {
 
 variable "custom_image" {
   description = "Provide the custom image to this module if the default variants are not sufficient"
-  type = map(object({
+  type = object({
     publisher = string
     offer     = string
     sku       = string
     version   = string
-  }))
+  })
   default = null
 }
 
@@ -739,11 +739,6 @@ variable "enable_boot_diagnostics" {
   default     = false
 }
 
-# variable "storage_account_uri" {
-#   description = "The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor. Passing a `null` value will utilize a Managed Storage Account to store Boot Diagnostics."
-#   default     = null
-# }
-
 variable "data_disks" {
   description = "Managed Data Disks for azure viratual machine"
   type = list(object({
@@ -801,6 +796,11 @@ variable "storage_account_resource_group_name" {
 
 variable "deploy_log_analytics_agent" {
   description = "Install log analytics agent to windows or linux VM"
+  default     = false
+}
+
+variable "accept_marketplace_agreement" {
+  description = "(Optional) Accept Marketplce Agreement for the requested Virtual Machine Image"
   default     = false
 }
 
