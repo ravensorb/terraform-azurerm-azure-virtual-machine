@@ -529,6 +529,33 @@ variable "windows_distribution_list" {
   }))
 
   default = {
+    windows2022dc-azure = {
+      publisher = "MicrosoftWindowsServer"
+      offer     = "WindowsServer"
+      sku       = "2022-datacenter-azure-edition"
+      version   = "latest"
+    },
+
+    windows2022dc-g2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer     = "WindowsServer"
+      sku       = "2022-datacenter-g2"
+      version   = "latest"
+    },
+
+    windows2022dc = {
+      publisher = "MicrosoftWindowsServer"
+      offer     = "WindowsServer"
+      sku       = "2022-datacenter"
+      version   = "latest"
+    },
+
+    windows2022coredc-g2 = {
+      publisher = "MicrosoftWindowsServer"
+      offer     = "WindowsServer"
+      sku       = "2022-datacenter-core-g2"
+      version   = "latest"
+    },
     windows2012r2dc = {
       publisher = "MicrosoftWindowsServer"
       offer     = "WindowsServer"

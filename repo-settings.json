@@ -1,6 +1,6 @@
 {
     "name": "terraform-azurerm-azure-virtual-machine",
     "description": "Terraform module for creating an Azure Virtual Machine (Windows or Linux)",
-    "version": "v1.0.1",
-    "message": "Added support for network interface definitions"
+    "version": "v1.0.2",
+    "message": "Added additional azure virtual machine defintions"
 }
