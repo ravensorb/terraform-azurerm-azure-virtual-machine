@@ -1,6 +1,6 @@
 {
     "name": "terraform-azurerm-azure-virtual-machine",
     "description": "Terraform module for creating an Azure Virtual Machine (Windows or Linux)",
-    "version": "v1.0.2",
-    "message": "Added additional azure virtual machine defintions"
+    "version": "v1.0.3",
+    "message": "Removed legact update timeout setting"
 }

@@ -22,7 +22,6 @@ locals {
   }
 
   timeout_create  = "45m"
-  timeout_update  = "15m"
   timeout_delete  = "15m"
   timeout_read    = "15m"
 }
@@ -54,7 +53,6 @@ resource "azurerm_resource_group" "rg" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -119,7 +117,6 @@ resource "azurerm_storage_account" "storage" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -172,7 +169,6 @@ resource "azurerm_public_ip" "pip" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -217,7 +213,6 @@ resource "azurerm_network_interface" "nic" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -262,7 +257,6 @@ resource "azurerm_network_security_group" "nsg" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -280,7 +274,6 @@ resource "azurerm_subnet_network_security_group_association" "nsg-assoc-new" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -298,7 +291,6 @@ resource "azurerm_subnet_network_security_group_association" "nsg-assoc-existing
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -471,7 +463,6 @@ resource "azurerm_linux_virtual_machine" "linux_vm" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -587,7 +578,6 @@ resource "azurerm_windows_virtual_machine" "win_vm" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -618,7 +608,6 @@ resource "azurerm_managed_disk" "data_disk" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -640,7 +629,6 @@ resource "azurerm_virtual_machine_data_disk_attachment" "data_disk" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -674,7 +662,6 @@ resource "azurerm_virtual_machine_extension" "omsagentwin" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -708,7 +695,6 @@ resource "azurerm_virtual_machine_extension" "omsagentlinux" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
@@ -746,7 +732,6 @@ resource "azurerm_monitor_diagnostic_setting" "nsg" {
 
   timeouts {
     create = local.timeout_create
-    update = local.timeout_update
     read   = local.timeout_read
     delete = local.timeout_delete
   }
